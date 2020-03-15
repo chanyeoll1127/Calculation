@@ -12,32 +12,52 @@ namespace Calculator
         {
             try
             {
-                int a, b, c;
-                Calculate cal = new Calculate();
-                Console.WriteLine("请输入所要操作的第一个整数：");
-                //string input1 = Console.ReadLine();
-                //int firstInput = int.Parse(input1);
-                int firstInput = int.Parse(Console.ReadLine());
-                a = firstInput;
-                Console.WriteLine("请输入所要操作的第二个整数：");
-                //string input2 = Console.ReadLine();
-                //int secondInput = int.Parse(input2);
-                int secondInput = int.Parse(Console.ReadLine());
-                b = secondInput;
-                Console.WriteLine("请输入所要进行的运算(+、-、*、/其中一个)：");
+                //int a, b, c;
+                //Calculate cal = new Calculate();
+                //Console.WriteLine("请输入所要操作的第一个整数：");
+                ////string input1 = Console.ReadLine();
+                ////int firstInput = int.Parse(input1);
+                //int firstInput = int.Parse(Console.ReadLine());
+                //a = firstInput;
+                //Console.WriteLine("请输入所要操作的第二个整数：");
+                ////string input2 = Console.ReadLine();
+                ////int secondInput = int.Parse(input2);
+                //int secondInput = int.Parse(Console.ReadLine());
+                //b = secondInput;
+                //Console.WriteLine("请输入所要进行的运算(+、-、*、/其中一个)：");
+                //string input3 = Console.ReadLine();
+                //char thirdInput = char.Parse(input3);
+                //c = thirdInput;
+                //switch (c)
+                //{
+                //    case '+':
+                //        cal.JiaFa(a, b); cal.Equals(a, b); break;
+                //    case '-':
+                //        cal.JianFa(a, b); cal.Equals(a, b); break;
+                //    case '*':
+                //        cal.ChengFa(a, b); cal.Equals(a, b); break;
+                //    case '/':
+                //        cal.ChuFa(a, b); cal.Equals(a, b); break;
+                //}
+                string s1, s2;
+                int c;
+                Calculate_New cal = new Calculate_New();
+                Console.WriteLine("请输入所要操作的第一个字符串：");
+                string input1 = Console.ReadLine();
+                s1 = input1;
+                Console.WriteLine("请输入所要操作的第二个字符串：");
+                string input2 = Console.ReadLine();
+                s2 = input2;
+                Console.WriteLine("请输入所要进行的运算(+、-其中一个)：");
                 string input3 = Console.ReadLine();
                 char thirdInput = char.Parse(input3);
                 c = thirdInput;
                 switch (c)
                 {
                     case '+':
-                        cal.JiaFa(a, b); cal.Equals(a, b); break;
+                        cal.JiaFa(s1, s2); break;
                     case '-':
-                        cal.JianFa(a, b); cal.Equals(a, b); break;
-                    case '*':
-                        cal.ChengFa(a, b); cal.Equals(a, b); break;
-                    case '/':
-                        cal.ChuFa(a, b); cal.Equals(a, b); break;
+                        cal.JianFa(s1, s2); break;
                 }
             }
             catch (Exception myex)
